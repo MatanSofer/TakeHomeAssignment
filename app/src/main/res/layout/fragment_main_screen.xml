@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainScreenFragment">
+
+    <ImageButton
+        android:id="@+id/settings_image_button"
+        android:contentDescription="Navigate To Settings"
+        android:layout_width="55dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="6dp"
+        android:background="#00FFFFFF"
+        android:src="@drawable/settings_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <AnalogClock
+        android:id="@+id/analog_clock"
+        android:layout_width="122dp"
+        android:layout_height="129dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_image_button" />
+
+    <TextView
+        android:id="@+id/amount_text_view"
+        android:contentDescription="Navigate To Settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="256dp"
+        android:text="Amount:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/analog_clock" />
+
+    <EditText
+        android:id="@+id/amount_edit_text"
+        android:layout_width="286dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="71dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/amount_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/amount_text_view" />
+
+    <TextView
+        android:id="@+id/payment_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="25dp"
+        android:text="Payments:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amount_edit_text" />
+
+    <Switch
+        android:id="@+id/payment_switch"
+        android:layout_width="50dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:checked="true"
+        android:scaleX="1"
+        android:scaleY="1"
+        app:layout_constraintStart_toEndOf="@+id/payment_text_view"
+        app:layout_constraintTop_toTopOf="@+id/payment_text_view"
+        tools:checked="true"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Spinner
+        android:id="@+id/payment_spinner"
+        android:layout_width="84dp"
+        android:layout_height="28dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="28dp"
+        app:layout_constraintEnd_toEndOf="@+id/amount_edit_text"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/payment_switch"
+        app:layout_constraintTop_toTopOf="@+id/payment_switch" />
+
+    <TextView
+        android:id="@+id/currency_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="Currency:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/payment_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/payment_text_view" />
+
+    <ToggleButton
+        android:id="@+id/toggle_btn_USD"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:checked="true"
+        android:textOff="USD"
+        android:textOn="USD"
+        app:layout_constraintStart_toEndOf="@+id/currency_text_view"
+        app:layout_constraintTop_toTopOf="@+id/toggle_btn_ILS" />
+
+    <ToggleButton
+        android:id="@+id/toggle_btn_ILS"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:textOff="ILS"
+        android:textOn="ILS"
+        app:layout_constraintEnd_toEndOf="@+id/payment_spinner"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toEndOf="@+id/toggle_btn_USD"
+        app:layout_constraintTop_toBottomOf="@+id/payment_spinner" />
+
+    <TextView
+        android:id="@+id/signature_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="Signature:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/currency_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/currency_text_view" />
+
+    <Switch
+        android:id="@+id/signature_switch"
+        android:layout_width="50dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+
+        android:checked="true"
+        android:scaleX="1"
+        android:scaleY="1"
+        app:layout_constraintStart_toEndOf="@+id/signature_text_view"
+        app:layout_constraintTop_toTopOf="@+id/signature_text_view"
+        tools:checked="true"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Button
+        android:id="@+id/main_screen_submit_btn"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:cornerRadius="0dp"
+        app:strokeColor="#818589"
+        android:textColor="@color/black"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="37dp"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/main_screen_exit_btn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/main_screen_exit_btn"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:cornerRadius="0dp"
+        app:strokeColor="#818589"
+        android:textColor="@color/black"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="37dp"
+        android:text="Exit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/main_screen_submit_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
