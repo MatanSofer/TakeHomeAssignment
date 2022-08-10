@@ -127,6 +127,7 @@
         android:background="@color/black"
         android:padding="2dp"
         android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/receipt_screen_finish_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
